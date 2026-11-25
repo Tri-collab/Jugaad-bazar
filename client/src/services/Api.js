@@ -8,7 +8,7 @@ async function request(path, { method = "GET", body } = {}) {
   const headers = {};
   if (body !== undefined) headers["Content-Type"] = "application/json";
   const token = getToken();
-  if (token) headers.Authorization = Bearer ${token};
+  if (token) headers.Authorization = `Bearer ${token}`;
 
   let res;
   try {
